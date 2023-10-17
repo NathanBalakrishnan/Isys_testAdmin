@@ -1,0 +1,160 @@
+/* Do not alter the existing styles here, pls specify a new name you need. 
+Also pls cross check that your defined name is already exists or not. */
+
+.empheader {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: black;
+  }
+  .empSubHeader {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+      Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #212529;
+  }
+  .btnPadding {
+    padding-right: 5px;
+  }
+  .btnColor {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  .btnColor:hover {
+    background-color: #0069d9;
+    color: white;
+    border: none;
+  }
+  .btnColorDisabled {
+    color: green !important;
+    background-color: #3d9bff !important;
+    border: none;
+    cursor: not-allowed;
+    pointer-events: all !important;
+  }
+  .btnColorDisabled:hover {
+    color: green !important;
+    background-color: #3d9bff !important;
+    border: none;
+    cursor: not-allowed;
+    pointer-events: all !important;
+  }
+  .plusSymbol1 {
+    position: relative;
+    top: 30%;
+    right: 25%;
+    height: 38px;
+    width: 15%;
+    background-color: blue;
+    border: 2px solid blue;
+    color: white;
+  }
+  .plusSymbol2 {
+    position: relative;
+    top: 30%;
+    right: 17%;
+    height: 38px;
+    width: 15%;
+    background-color: blue;
+    border: 2px solid blue;
+    color: white;
+  }
+  .iconAlignment {
+    display: flex;
+    align-items: center;
+  }
+  .iconStyles {
+    font-size: 18px;
+    border: 1px solid #ced4da;
+    padding: 9px;
+    border-radius: 5px;
+    background: #e9ecef;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #495057;
+  }
+  .iconInpStyle {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .iconStylesContract {
+    font-size: 12px;
+    border: 1px solid #007bff;
+    padding: 12px;
+    border-radius: 5px;
+    background: #007bff;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #ffffff;
+  }
+  .daysHeader {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .tableOverflow {
+    overflow: scroll;
+    display: block;
+  }
+  .designInputWidth {
+    width: 45px;
+    margin: 5px 10px;
+  }
+  .numberInput {
+    width: 45px;
+    margin: 5px 10px;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+  }
+  .tableHeadStart {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 41px;
+  }
+  .spinner {
+    animation: spin 1s infinite linear;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .leaveFormDatePicker > div {
+    border: thin solid #a7a7a7;
+    border-radius: 7px;
+    padding: 4px 5px;
+  }
+  .legendColor {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px; /* or 0 */
+    display: inline-block;
+    margin-right: 8px;
+  }
+  .legendBlue {
+    background-color: blue;
+  }
+  
+  .legendRed {
+    background-color: red;
+  }
+  
+  .legendYellow {
+    background-color: #3cb371;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+  .file-selected {
+    border-color: green;
+  }
