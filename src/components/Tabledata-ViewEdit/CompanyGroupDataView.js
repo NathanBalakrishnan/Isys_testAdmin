@@ -99,6 +99,7 @@ const CompanyDataView = () => {
     let FullURL=Constants.URL+'companyGroup/update'
     axios.put(FullURL, finalData)
     .then((response) => {
+      console.log("status",response.status)
       console.log('Data updated successfully:', response.data);
     })
     .catch((error) => {

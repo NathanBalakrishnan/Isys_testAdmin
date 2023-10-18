@@ -29,7 +29,7 @@ const CompanyDataView = () => {
   companyGroupId:'',
   }
   const location = useLocation()
-  const companyid = location.state.companyid;
+  const {companyid} = location.state;
   const [errormessage, setErrorMessage] = useState('')
   const [isEdit, setIsEdit] = useState(true)
   const [values, setValues] = useState(initialValuesone)
@@ -119,11 +119,7 @@ const CompanyDataView = () => {
         setValidated(false)
         setValues(initialValuesone)
         setMessage('Data saved successfully')
-
-        setTimeout(function () {
-          setMessage('')
-          pageRedirect()
-        }, 2000)
+        
       } else {
         setMessage('')
         console.log('Some error occured')
@@ -303,7 +299,7 @@ const CompanyDataView = () => {
               </CForm>
             </CCardBody>
             <CCardHeader className="text-dark p-3 border border-0">
-              <CCol md={12} className="d-flex justify-content-left">
+              {/* <CCol md={12} className="d-flex justify-content-left">
                 <Link to={'/masters/company'}>
                   <CButton className={styles.btnColor}>
                     <FontAwesomeIcon icon={faArrowLeft} />
@@ -342,6 +338,63 @@ const CompanyDataView = () => {
                 ) : (
                   ''
                 )}
+              </CCol> */}
+              <CCol md={12} className="d-flex justify-content-left">
+                <Link to="/masters/company">
+                  <CButton className={styles.btnColor}>
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                    &nbsp; Back
+                  </CButton>
+                </Link>
+                <div className={styles.btnPadding}></div>
+                {message ? (
+                  <CButton disabled className={styles.btnColorDisabled}>
+                    Data Saved &#10004;
+                  </CButton>
+                ) : (
+                  <>
+                    {!isEdit && accessFunctionNew('moduleForm', 'update') && (
+                      <CButton
+                        className={styles.btnColor}
+                        onClick={() => setIsEdit(!isEdit)}
+                      >
+                        Edit &nbsp;
+                        <FontAwesomeIcon icon={faEdit} />
+                      </CButton>
+                    )}
+                    <CButton
+                      disabled={isEdit}
+                      style={
+                        isEdit
+                          ? {
+                              color: '#999999',
+                              backgroundColor: '#f2f2f2',
+                              borderColor: '#e6e6e6',
+                            }
+                          : {}
+                      }
+                      className={styles.btnColor}
+                      onClick={handleSubmitCheck}
+                    >
+                      Save
+                    </CButton>
+                  </>
+                )}
+                <CButton className={styles.btnColor} onClick={() => setIsEdit(!isEdit)}>
+                Edit &nbsp;
+                  <FontAwesomeIcon icon={faEdit} />
+                </CButton>
+
+                {accessFunctionNew('moduleForm', 'update') ? (
+                  <CButton className={styles.btnColor} onClick={() => setIsEdit(!isEdit)}>
+                    Edit &nbsp;
+                    <FontAwesomeIcon icon={faEdit} />
+                  </CButton>
+                ) : (
+                  ''
+                )}
+                
+               
               </CCol>
             </CCardHeader>
           </CCard>

@@ -349,7 +349,7 @@ export function accessFunctionNew(responsibleName, accessName) {
     // console.log('returning-access', access)
     return access; 
   } else {
-    window.location.href = '/#/login';
+    // window.location.href = '/#/forms/company-data';
     return false;
   }
 }
